@@ -3,8 +3,15 @@ const button = document.getElementById('button')
 const display = document.getElementById('display')
 
 function inserirTarefa(){
-    display.innerHTML = input.value
-    display.innerhtml += `<p>${tarefa}</p>`
+    let tarefa = input.value
+    display.innerHTML += 
+    `<div class="tarefa">
+        ${tarefa}
+        <div>
+        <button class="delete">Deletar</button>
+        <button class="edit">Editar</button>
+        </div>
+    </div>`
     input.value = ''
 }
 
